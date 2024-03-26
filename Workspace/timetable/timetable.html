@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Table</title>
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <h2>Time-Table</h2>
+    <hr>
+   
+      
+      <form id="fileForm"> 
+        <label for="file" class="custom-file-input">
+            <input type="file" id="file" id="imageInput" accept="image/*" class="file-input">
+        <span class="file-icon"></span>
+      </label>
+          
+        <button type="button" id="uploadButton">Upload</button>
+      </form>
+      <div id="status"></div>
+
+
+<img id="previewImage" src="" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
+
+      <script>
+        // Get references to the input and image elements
+    const imageInput = document.getElementById('imageInput');
+    const previewImage = document.getElementById('previewImage');
+
+// Add an event listener to the input element to detect changes
+    imageInput.addEventListener('change', function() {
+  // Check if a file is selected
+    if (imageInput.files && imageInput.files[0]) {
+        const reader = new FileReader();
+
+    // Read the selected file as a data URL
+    reader.onload = function(e) {
+      // Set the image source to the data URL, displaying the selected image
+      previewImage.src = e.target.result;
+    };
+
+    // Read the selected file
+    reader.readAsDataURL(imageInput.files[0]);
+  }
+});
+
+      </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Table</title>
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <h2>Time-Table</h2>
+    <hr>
+
+    <form id="fileForm"> 
+        <label for="imageInput" class="custom-file-input">
+            <input type="file" id="imageInput" accept="image/*" class="file-input">
+            <span class="file-icon"></span>
+        </label>
+          
+    </form>
+    <div id="status"></div>
+
+    <img id="previewImage" src="" style="max-width: 100%; max-height: 200px;">
+
+    <script>
+        // Get references to the input and image elements
+        const imageInput = document.getElementById('imageInput');
+        const previewImage = document.getElementById('previewImage');
+
+        // Add an event listener to the input element to detect changes
+        imageInput.addEventListener('change', function() {
+            // Check if a file is selected
+            if (imageInput.files && imageInput.files[0]) {
+                const reader = new FileReader();
+
+                // Read the selected file as a data URL
+                reader.onload = function(e) {
+                    // Set the image source to the data URL, displaying the selected image
+                    previewImage.src = e.target.result;
+                };
+
+                // Read the selected file
+                reader.readAsDataURL(imageInput.files[0]);
+            }
+        });
+    </script>
+</body>
+</html>
